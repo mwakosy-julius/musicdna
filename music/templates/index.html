@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}MusicDNA{% endblock %}
+
+{% block content %}
+<style>
+    /* Additional Styles for Index Page */
+    .background {
+        background-image: url('{% static "music/images/musica.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    .data-entry {
+        display: d-flex;
+        justify-content: center;
+        padding: 20px;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        border-radius: 10px;
+    }
+    .play-button {
+        margin-top: 20px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+    .play-button:hover {
+        background-color: #2199d5;
+    }
+</style>
+
+<main role="main" class="inner cover ">
+    <h1 class="cover-heading">DNA Music Player</h1>
+    <div class="data-entry">
+        <form action="#" method="post" class="d-flex flex-column">
+            <!-- Add your data entry fields here -->
+            <input type="text" name="DNA" placeholder="Enter DNA" class="w-50 h-25">
+            <button type="submit" class="play-button">Play</button>
+        </form>
+    </div>
+</main>
+
+{% endblock %}
